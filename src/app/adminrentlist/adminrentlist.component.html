@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+<h3 class = "user-name">{{this.serv.userSignedIn}}</h3>
+
+<ng-container *ngIf="this.serv.rentCount == 0">
+    <div class="no-item">
+        <h1>{{'RentList Table is Empty.' | translate}}</h1>
+    </div>
+</ng-container>
+
+<div *ngIf="this.serv.rentCount" class="list-body">
+    <table class="admin-rent-list-table-container">
+        <tr>
+            <th>Book Title</th> 
+            <th>Username</th>
+        </tr>
+        <ng-container *ngFor="let item of this.serv.bookDetails">
+            <ng-container *ngIf="item.rented != ''">
+                <tr>
+                    <td>{{item.title}}</td>
+                    <td>{{item.rented}}</td>
+                </tr>
+            </ng-container>
+        </ng-container>
+
+    </table>
+</div>

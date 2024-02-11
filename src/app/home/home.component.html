@@ -1,0 +1,11 @@
+<app-navbar></app-navbar>
+<h1>{{"greeting" | translate}}</h1>
+<h3 class = "user-name">{{this.serv.userSignedIn}}</h3>
+<div class="all-item-container">
+    <ng-container *ngFor="let item of this.serv.bookDetails">
+        <ng-container *ngIf="this.serv.userSignedIn === 'admin@gmail.com' || item.rented.length == 0 || item.rented == this.serv.userSignedIn">
+            <app-item [item]="item" [btn1]="btn1" [btn1Comp]="btn1Comp" [btn2]="btn2" [btn2Comp]="btn2Comp"></app-item>
+        </ng-container>
+    </ng-container>
+</div>
+

@@ -1,0 +1,71 @@
+.navbar-body {
+    color : var(--navbar-text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--navbar-background-color);
+}
+
+.navbar-body ul {
+    margin : 0px;
+    padding: 20px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-body ul li {
+    margin : 10px;
+    font-size: 18px;
+    font-weight: 550;
+    cursor: pointer;
+}
+
+.navbar-body input {
+    flex : 1;
+    margin-left : 80px;
+    margin-right : 100px;
+    height : 20px;
+    border: 1.5px solid var(--navbar-searchbar-border-color);
+    padding : 10px;
+    border-radius: 3px;
+    background-color : var(--navbar-searchbar-color);
+    color : var(--navbar-searchbar-text-color);
+}
+
+.navbar-body input::placeholder {
+    color : var(--navbar-searchbar-placeholder-color);
+}
+
+
+
+.navbar-body button {
+    margin-right: 30px;
+    /* width : 80px; */
+    height: 40px;
+    border: 1.5px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.signout {
+    background-color : var(--navbar-body-button-background-color);
+    color : var(--navbar-body-button-text-color);
+}
+
+.theme-button {
+    background-color: var(--theme-color-background-color);
+    color : var(--theme-color-text-color);
+}
+
+
+
+.navbar-body .signout:hover {
+    background-color: var(--navbar-body-button-background-color-hovor);
+}
+
+hr {
+    width: 90%;
+    border: 1.6px solid var(--navbar-hr);
+}
+

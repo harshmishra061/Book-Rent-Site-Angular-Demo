@@ -1,0 +1,14 @@
+<app-navbar></app-navbar>
+<h3 class = "user-name">{{this.serv.userSignedIn}}</h3>
+<ng-container *ngIf="this.serv.wishlistCount == 0">
+    <div class="no-item">
+        <h1>{{'No Item Wishlisted.' | translate}}</h1>
+    </div>
+</ng-container>
+<div class="all-item-container">
+    <ng-container *ngFor="let item of this.serv.bookDetails">
+        <ng-container *ngIf="userWishlisted(item)">
+            <app-item [item]="item" [btn1]="btn1" [btn1Comp]="btn1Comp" [btn2]="btn2" [btn2Comp]="btn2Comp"></app-item>
+        </ng-container>
+    </ng-container>
+</div>

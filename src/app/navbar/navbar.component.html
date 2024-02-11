@@ -1,0 +1,22 @@
+<div class="navbar-body">
+    <ul>
+        <li routerLink="/home" (click)="mark('home')">{{"Home" | translate}} <ng-container *ngIf="match('home')"><hr/></ng-container></li>
+        <ng-container *ngIf="isAdmin() == false">
+            <li routerLink="/rented" (click)="mark('rentlist')">{{"Rented" | translate}}<ng-container *ngIf="match('rentlist')"><hr/></ng-container></li>
+            <li routerLink="/wishlisted" (click)="mark('wishlist')">{{"Wishlisted" | translate}}<ng-container *ngIf="match('wishlist')"><hr/></ng-container></li>
+        </ng-container>
+        <ng-container *ngIf="isAdmin() == true">
+            <li routerLink="/newbook" (click)="mark('newbook')">{{"Add New Book" | translate}}<ng-container *ngIf="match('newbook')"><hr/></ng-container></li>
+            <li routerLink="/adminwishlist" (click)="mark('wishlistlist')">{{"Wishlist List" | translate}}<ng-container *ngIf="match('wishlistlist')"><hr/></ng-container></li>
+            <li routerLink="/adminrentlist" (click)="mark('rentlistlist')">{{"Rent List" | translate}}<ng-container *ngIf="match('rentlistlist')"><hr/></ng-container></li>
+        </ng-container>
+    </ul>
+
+    <input type="text" placeholder="{{'Search...' | translate}}">
+
+    <button class="signout" (click)="handleSignOut()">{{"SignOut" | translate}}</button>
+    <button class="theme-button" (click)="handleThemeButton()">{{this.serv.mode | translate}}</button>
+</div>
+
+
+<router-outlet></router-outlet>

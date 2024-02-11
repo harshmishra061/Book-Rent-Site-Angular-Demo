@@ -1,0 +1,15 @@
+.admin-wish-list-table-container {
+    background-color: grey;
+    color : white;
+    flex : 0.8;
+    text-align: center;
+}
+
+th, td {
+    padding : 5px;
+}
+
+table, th, td {
+    border : 1px solid black;
+    border-collapse: collapse;
+}

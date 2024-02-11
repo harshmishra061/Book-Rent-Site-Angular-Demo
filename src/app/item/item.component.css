@@ -1,0 +1,77 @@
+.item-body {
+    background-color: var(--item-background-color);
+    border: 1px solid black;
+    margin : 5px;
+}
+.item-content {
+    color : var(--item-text-color);
+    padding : 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height : 400px;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: grey; 
+    border-radius:3px;
+}
+
+.item-body h4 {
+    color : var(--item-author-color)
+}
+.item-button {
+    display: flex;
+    /* width : 100%; */
+    padding : 5px;
+    justify-content: space-around;
+    background-color: var(--item-button-background-color);
+}
+
+.item-button button {
+    width : 140px;
+    height : 40px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.rent-button {
+    color : var(--rent-button-text-color);
+    background-color: var(--rent-button-color);
+    border : 3px solid var(--item-button-border-color);
+}
+
+.wishlist-button {
+    color : var(--wishlist-button-text-color);
+    background-color: var(--wishlist-button-color);
+    border : 3px solid var(--item-button-border-color);
+}
+
+.rented-button {
+    border : 3px solid var(--item-button-border-color);
+    font-weight: 600;
+    color : var(--rented-button-text-color);;
+    background-color: var(--rented-button-color);
+}
+
+.wishlisted-button {
+    border : 3px solid var(--item-button-border-color);
+    color : var(--wishlisted-button-text-color);
+    font-weight: 600;
+    background-color: var(--wishlisted-button-color);
+}
+
+.remove-permanently-button {
+    border : 3px solid var(--item-button-border-color);
+    background-color : rgb(145, 0, 0);
+    color : white;
+}
+.remove-permanently-button:hover {
+    border : 3px solid var(--item-button-border-color);
+    background-color: rgb(53, 0, 0);
+}

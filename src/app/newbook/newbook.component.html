@@ -1,0 +1,12 @@
+<app-navbar></app-navbar>
+<h3 class = "user-name">{{this.serv.userSignedIn}}</h3>
+<div class="new-book-body">
+    <form #nBook="ngForm" (ngSubmit)="insertIntoBookDetails(nBook.value)" class="new-book-container">
+        <input type="text" placeholder='{{"Title" | translate}}' ngModel name="title">
+        <input type="text" placeholder='{{"Subtitle" | translate}}' ngModel name="subtitle">
+        <input type="text" placeholder='{{"Author" | translate}}' ngModel name="author">
+        <input type="text" placeholder='{{"Description" | translate}}' ngModel name="description">
+        <button>{{'Add' | translate}}</button>
+        <h3>{{this.output}}</h3>
+    </form>
+</div>

@@ -1,0 +1,17 @@
+<div class="item-body">
+    <div class="item-content">
+        <h2>{{item.title | translate}}</h2>
+        <h3>{{item.subtitle | translate}}</h3>
+        <h4>{{item.author | translate}}</h4>
+        <h5>{{item.description | translate}}</h5>
+    </div>
+    <div class="item-button">
+        <ng-container *ngIf="isAdmin() == false">
+            <button [ngClass]="!isRented ? 'rent-button' : 'rented-button'" (click)="handleRentClick()"> {{!isRented ? (btn1 | translate) : (btn1Comp | translate)}}</button>
+            <button [ngClass]="!isWishlisted ? 'wishlist-button' : 'wishlisted-button'" (click)="handleWishlistClick()"> {{!isWishlisted ? (btn2 | translate) : (btn2Comp | translate)}}</button>
+        </ng-container>
+        <ng-container *ngIf="isAdmin() == true">
+            <button class="remove-permanently-button" (click)="handleRemovePermanently()"> {{'Remove Permanently' | translate}} </button>
+        </ng-container>
+    </div>
+</div>

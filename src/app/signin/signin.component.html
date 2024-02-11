@@ -1,0 +1,7 @@
+<div class="body">
+    <form #result="ngForm" (ngSubmit)="handleSignIn(result.value)" class="signin-container">
+        <input type="text" placeholder="{{'Enter Email' | translate}}" name="user" ngModel>
+        <input type="password" placeholder="{{'Enter Password' | translate}}" name="password" ngModel>
+        <button>{{"SignIn" | translate}}</button>
+    </form>
+</div>
